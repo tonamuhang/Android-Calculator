@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button minusBtn = (Button)findViewById(R.id.minusBtn);
         Button multBtn = (Button)findViewById(R.id.multBtn);
         Button divBtn = (Button)findViewById(R.id.divBtn);
-
+        Button swapBtn = (Button)findViewById(R.id.swapBtn);
 
 
 
@@ -78,6 +78,26 @@ public class MainActivity extends AppCompatActivity {
 
                 double result = (double)num1 / (double)num2;
                 resultTextView.setText(result+"");
+            }
+        });
+
+        swapBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                EditText firstNumEditText = (EditText)findViewById(R.id.firstNumEditText);
+                EditText secNumEditText = (EditText)findViewById(R.id.secNumEditText);
+                TextView resultTextView = (TextView) findViewById(R.id.resultTextview);
+
+
+                try {
+                    int result = Integer.parseInt(resultTextView.getText().toString());
+                    firstNumEditText.setText("" + result);
+                }
+                catch (Throwable e){
+                    firstNumEditText.setText("");
+                }
+
+                secNumEditText.setText("");
             }
         });
     }
