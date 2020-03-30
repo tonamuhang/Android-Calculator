@@ -1,3 +1,3 @@
 # Android-Calculator
-Simple calculator
-A simple calculator built for android devices
+
+A simple calculator built for android devices.
